@@ -8,8 +8,12 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AboutSection: typeof import('./src/components/AboutSection.vue')['default']
+    ContactSection: typeof import('./src/components/ContactSection.vue')['default']
+    Footer: typeof import('./src/components/Footer.vue')['default']
     Header: typeof import('./src/components/Header.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    HeroSection: typeof import('./src/components/HeroSection.vue')['default']
     IconCommunity: typeof import('./src/components/icons/IconCommunity.vue')['default']
     IconDocumentation: typeof import('./src/components/icons/IconDocumentation.vue')['default']
     IconEcosystem: typeof import('./src/components/icons/IconEcosystem.vue')['default']
@@ -17,8 +21,11 @@ declare module 'vue' {
     IconTooling: typeof import('./src/components/icons/IconTooling.vue')['default']
     Name: typeof import('./src/components/Loaders/Name.vue')['default']
     NameLoader: typeof import('./src/components/Loaders/NameLoader.vue')['default']
+    PromoteSection: typeof import('./src/components/PromoteSection.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    ServiceSection: typeof import('./src/components/ServiceSection.vue')['default']
+    StarterSection: typeof import('./src/components/StarterSection.vue')['default']
     TheWelcome: typeof import('./src/components/TheWelcome.vue')['default']
     WelcomeItem: typeof import('./src/components/WelcomeItem.vue')['default']
   }
