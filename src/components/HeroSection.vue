@@ -4,49 +4,60 @@ export default {
     data() {
         return {
             hellos: ['Hello', 'Hola', 'Bonjour', 'Hallo', 'Ciao', 'नमस्ते', 'こんにちは', '안녕하세요', '你好', 'வணக்கம்'],
-            currentHello: 'Hello'
+            currentHello: 'Hello',
+            intervalId: null
         };
     },
     mounted() {
         this.startHelloAnimation();
     },
+    beforeUnmount() {
+        clearInterval(this.intervalId);
+    },
     methods: {
         startHelloAnimation() {
             let index = 0;
-            setInterval(() => {
+            this.intervalId = setInterval(() => {
                 index = (index + 1) % this.hellos.length;
                 this.currentHello = this.hellos[index];
             }, 1000);
         }
     }
-}
+};
 </script>
 
 <template>
-    <div class="hero-container w-full min-h-screen flex items-center justify-center bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6 py-8">
+    <div
+        class="relative hero-container w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700">
+        <div class="max-w-7xl mx-auto px-6 pt-16 pb-6">
             <div class="text-center">
-                <h1 class="text-2xl tracking-tight font-bold sm:text-2xl md:text-2xl">
+                <!-- Animated Hello Text with Bounce Effect -->
+                <h1 class="text-3xl tracking-tight font-bold sm:text-4xl md:text-5xl animate-bounce">
                     <span class="block text-[#a0ff70]">{{ currentHello }}, I'm Kabilan</span>
                 </h1>
 
-                <h1 class="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-6xl">
-                    <span class="block text-gray-700">Full Stack Developer</span>
-                    <span class="block text-[#a0ff70]">& Web Designer</span>
+                <!-- Main Title with Gradient and Subtle Animation -->
+                <h1 class="text-5xl tracking-tight font-extrabold sm:text-6xl md:text-7xl leading-tight">
+                    <span
+                        class="block text-transparent bg-clip-text bg-gradient-to-r from-[#a0ff70] to-[#70e1ff] animate-fade-in">Full
+                        Stack Developer</span>
+                    <span class="block text-[#a0ff70] animate-slide-up">& Web Designer</span>
                 </h1>
 
-                <p class="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">
-                    I craft elegant, user-centric web solutions using modern technologies. From responsive designs to
-                    scalable backend architectures, I bring ideas to life with clean code and creative solutions.
+                <!-- Description Section -->
+                <p class="mt-6 text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                    Crafting intuitive, responsive, and high-performance web applications using cutting-edge
+                    technologies. Transforming ideas into digital experiences that leave a lasting impact.
                 </p>
 
-                <div class="mt-8 flex justify-center space-x-4">
+                <!-- CTA Buttons with Enhanced Hover Effects -->
+                <div class="mt-8 flex justify-center space-x-6">
                     <a href="#projects"
-                        class="px-8 py-3 border border-transparent text-base font-medium rounded-md text-gray-700 bg-[#a0ff70] hover:bg-[#8ce460] transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer">
+                        class="px-8 py-3 border border-transparent text-lg font-semibold rounded-lg text-gray-700 bg-[#a0ff70] hover:bg-[#8ce460] transition duration-300 ease-in-out transform hover:scale-110 shadow-lg">
                         View Projects
                     </a>
                     <a href="https://wa.me/918667620030" target="_blank"
-                        class="px-8 py-3 border border-transparent text-base font-medium rounded-md text-[#a0ff70] bg-gray-100 hover:bg-gray-200 cursor-pointer">
+                        class="px-8 py-3 border border-transparent text-lg font-semibold rounded-lg text-[#a0ff70] bg-gray-100 hover:bg-gray-200 transform transition duration-300 ease-in-out hover:scale-110 shadow-lg">
                         Let's Connect
                     </a>
                 </div>
@@ -54,3 +65,51 @@ export default {
         </div>
     </div>
 </template>
+
+<style scoped>
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.animate-slide-up {
+    animation: slideUp 1.5s ease-out;
+}
+
+.animate-bounce {
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+</style>

@@ -12,11 +12,11 @@ import Footer from './components/Footer.vue';
 </script>
 
 <template>
-  <!-- <StarterSection /> -->
+  <StarterSection />
   <HeroSection />
+  <AboutSection />
   <PromoteSection />
   <ProjectSection />
-  <AboutSection />
   <ServiceSection />
   <ContactSection />
   <Footer />
