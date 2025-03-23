@@ -1,5 +1,5 @@
 <template>
-    <div id="projects" class="projects-container py-8 bg-transparent text-white">
+    <div id="projects" class="relative promote-section py-12  transition-colors duration-200">
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-6">
                 <h2 class="text-4xl font-bold text-white">
@@ -10,7 +10,8 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project Card 1 -->
-                <div class="project-card rounded-xl overflow-hidden bg-gray-800 shadow-xl shadow-gray-700/50">
+                <div
+                    class="project-card rounded-xl overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700">
                     <div class="relative">
                         <img src="/src/assets/images/hrms.jpg" alt="Project 1" class="w-full h-48 object-cover">
                     </div>
@@ -38,7 +39,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card rounded-xl overflow-hidden bg-gray-800 shadow-xl shadow-gray-700/50">
+                <div
+                    class="project-card rounded-xl overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700">
                     <div class="relative">
                         <img src="/src/assets/images/hrms.jpg" alt="Project 1" class="w-full h-48 object-cover">
                     </div>
@@ -67,7 +69,8 @@
                     </div>
                 </div>
 
-                <div class="project-card rounded-xl overflow-hidden bg-gray-800 shadow-xl shadow-gray-700/50">
+                <div
+                    class="project-card rounded-xl overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700">
                     <div class="relative">
                         <img src="/src/assets/images/hrms.jpg" alt="Project 1" class="w-full h-48 object-cover">
                     </div>

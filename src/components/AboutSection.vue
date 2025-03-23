@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-    <div id="about" class="relative py-16 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-white">
+    <div id="about" class="relative py-16 text-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid md:grid-cols-12 gap-12 items-center">
                 <!-- Profile Image Section with Glow Effect -->
@@ -52,7 +52,7 @@ export default {
 
                     <!-- Contact Me Button with Hover Animation -->
                     <a href="https://wa.me/918667620030" target="_blank"
-                        class="inline-flex items-center px-8 py-3 bg-[#70e1ff] hover:bg-[#a0ff70] text-gray-900 font-semibold rounded-lg transition-transform transform hover:scale-110 shadow-md">
+                        class="inline-flex items-center px-8 py-3  text-gray-700 bg-[#a0ff70] hover:bg-[#8ce460] font-semibold rounded-lg transition-transform transform hover:scale-110 shadow-md">
                         Contact Me
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20"
                             fill="currentColor">

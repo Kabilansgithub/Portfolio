@@ -3,8 +3,8 @@ export default {
     name: 'HeroSection',
     data() {
         return {
-            hellos: ['Hello', 'Hola', 'Bonjour', 'Hallo', 'Ciao', 'नमस्ते', 'こんにちは', '안녕하세요', '你好', 'வணக்கம்'],
-            currentHello: 'Hello',
+            hellos: ['வணக்கம்', 'Hello', 'नमस्ते', 'こんにちは', 'Hola', 'Bonjour', 'Hallo', 'Ciao', '안녕하세요', '你好'],
+            currentHello: 'வணக்கம்',
             intervalId: null
         };
     },
@@ -27,12 +27,11 @@ export default {
 </script>
 
 <template>
-    <div
-        class="relative hero-container w-full min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700">
+    <div class="relative hero-container w-full min-h-screen flex items-center justify-center ">
         <div class="max-w-7xl mx-auto px-6 pt-16 pb-6">
             <div class="text-center">
                 <!-- Animated Hello Text with Bounce Effect -->
-                <h1 class="text-3xl tracking-tight font-bold sm:text-4xl md:text-5xl animate-bounce">
+                <h1 class="text-3xl tracking-tight font-bold sm:text-4xl md:text-5xl  animate-bounce ">
                     <span class="block text-[#a0ff70]">{{ currentHello }}, I'm Kabilan</span>
                 </h1>
 
@@ -57,7 +56,7 @@ export default {
                         View Projects
                     </a>
                     <a href="https://wa.me/918667620030" target="_blank"
-                        class="px-8 py-3 border border-transparent text-lg font-semibold rounded-lg text-[#a0ff70] bg-gray-100 hover:bg-gray-200 transform transition duration-300 ease-in-out hover:scale-110 shadow-lg">
+                        class="px-8 py-3 border border-transparent text-lg font-semibold rounded-lg text-[#a0ff70] bg-[#000000] hover:bg-[#101010] transform transition duration-300 ease-in-out hover:scale-110 shadow-lg">
                         Let's Connect
                     </a>
                 </div>
