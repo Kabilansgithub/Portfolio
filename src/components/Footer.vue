@@ -32,7 +32,10 @@ export default {
 
                 <li>
                     <a class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
-                        href="#">
+                        href="#" @click.prevent="$root.$el.scrollTo({
+                            top: document.querySelector('about').offsetTop - 100,
+                            behavior: 'smooth'
+                        })">
                         About
                     </a>
                 </li>
@@ -128,8 +131,9 @@ export default {
             </ul>
 
             <!-- Large Name -->
-            <div class="absolute bottom-16 left-0 right-0 text-center">
-                <h1 class="text-9xl font-bold tracking-wide" id="btn">KABILAN S</h1>
+            <div class="absolute bottom-20 left-0 right-0 text-center">
+                <h1 class="text-5xl font-bold tracking-wide sm:text-5xl md:text-8xl lg:text-9xl xl:text-[6.5rem] 2xl:text-[7.5rem]"
+                    id="btn">KABILAN S</h1>
             </div>
 
             <!-- Footer Section -->
@@ -142,7 +146,7 @@ export default {
             </footer>
 
             <!-- Current Time in IST -->
-            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-gray-500" id="current-time">
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-500" id="current-time">
                 IST --:--:--
             </div>
         </div>
